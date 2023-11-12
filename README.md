@@ -19,6 +19,25 @@ $ docker run -d --restart always --name PandoraNext -p 8181:80 -e PANDORA_NEXT_L
 * 你可以映射目录到容器内的`/data`目录，`config.json`和`tokens.json`放在其中。
 * 自行使用真实的`JWT Token`替换命令中的`<JWT Token>`，没有`<`和`>`，不要搞错。
 
+## Docker Compose 模版
+
+```yaml
+version: '3'
+services:
+  pandora-next:
+    image: pengzhile/pandora-next
+    container_name: PandoraNext
+    restart: always
+    ports:
+      - "8181:80"
+    environment:
+      - PANDORA_NEXT_LICENSE=<JWT Token>
+    volumes:
+      - ./data:/data
+```
+
+* 对照上述`Docker 部署`的内容自行修改。
+
 ## Nginx 配置
 
 ```
