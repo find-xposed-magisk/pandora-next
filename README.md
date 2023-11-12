@@ -2,7 +2,7 @@
 
 ## 手动部署
 
-* 在[Releases](/releases)中下载对应操作系统和架构的包。
+* 在[Releases](https://github.com/pandora-next/deploy/releases)中下载对应操作系统和架构的包。
 * 解压后修改同目录中的`config.json`至你需要的参数。
 * 将获取到的`JWT Token`内容写进同目录的`license.jwt`中。
 * 启动`PandoraNext`或`PandoraNext.ext`即可。
