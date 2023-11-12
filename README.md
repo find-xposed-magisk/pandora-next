@@ -1,15 +1,23 @@
 # Deploy
 
+## 手动部署
+
+* 在[Releases](/releases)中下载对应操作系统和架构的包。
+* 解压后修改同目录中的`config.json`至你需要的参数。
+* 将获取到的`JWT Token`内容写进同目录的`license.jwt`中。
+* 启动`PandoraNext`或`PandoraNext.ext`即可。
+
 ## Docker 部署
 
 ```bash
 $ docker pull pengzhile/pandora-next
-$ docker run -d --restart always --name PandoraNext -p 8181:80 -e PANDORA_NEXT_LICENSE="jwt content" pengzhile/pandora-next
+$ docker run -d --restart always --name PandoraNext -p 8181:80 -e PANDORA_NEXT_LICENSE="<JWT Token>" pengzhile/pandora-next
 
 ```
 
 * 容器内默认监听`80`端口，映射宿主机的`8181`端口，可自行修改。
 * 你可以映射目录到容器内的`/data`目录，`config.json`和`tokens.json`放在其中。
+* 自行使用真实的`JWT Token`替换命令中的`<JWT Token>`，没有`<`和`>`，不要搞错。
 
 ## Nginx 配置
 
@@ -50,3 +58,10 @@ server {
 * Nginx建议开启`http2`。
 * 以上仅为推荐配置，可根据具体情况进行改动。
 * 建议开启`ssl`也即`https`，否则浏览器限制将无法复制网页内容。
+
+## 关于 license.jwt
+
+* 目前[手动私聊我](https://t.me/zhile_bot)，发服务器IP，我手动给你发。
+* 后续可在web页面中自助获取，开发中。
+* 没有固定IP无法部署，你哪怕用`proxy_url`参数指定一个机场代理呢。
+* `PHP`是世界上最好的编程语言。
