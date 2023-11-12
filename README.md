@@ -4,7 +4,7 @@
 
 * 在[Releases](https://github.com/pandora-next/deploy/releases)中下载对应操作系统和架构的包。
 * 解压后修改同目录中的`config.json`至你需要的参数。
-* 将获取到的`JWT Token`内容写进同目录的`license.jwt`中。
+* 将获取到的`JWT Token`内容写进同目录的`license.jwt`文件中。
 * 启动`PandoraNext`或`PandoraNext.ext`即可。
 
 ## Docker 部署
@@ -79,7 +79,7 @@ server {
 * 以上仅为推荐配置，可根据具体情况进行改动。
 * 建议开启`ssl`也即`https`，否则浏览器限制将无法复制网页内容。
 
-## 关于 license.jwt
+## 关于 license.jwt文件
 
 * 目前[手动私聊我](https://t.me/zhile_bot)，发服务器IP，我手动给你发。
 * 后续可在web页面中自助获取，开发中。
