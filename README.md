@@ -39,6 +39,16 @@ services:
 
 * 对照上述`Docker 部署`的内容自行修改。
 
+* 由于 Docker Compose 中映射了`/data`目录，所以要提供`config.json`，这是一个示例：
+
+```json
+{
+  "bind": "0.0.0.0:80",
+  "timeout": 600,
+  "proxy_url": ""
+}
+```
+
 ## Nginx 配置
 
 ```
