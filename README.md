@@ -11,7 +11,7 @@
 
 ```bash
 $ docker pull pengzhile/pandora-next
-$ docker run -d --restart always --name PandoraNext --net=host -p 8181:80 \
+$ docker run -d --restart always --name PandoraNext --net=bridge -p 8181:80 \
              -e PANDORA_NEXT_LICENSE="<JWT Token>" pengzhile/pandora-next
 
 ```
@@ -28,7 +28,7 @@ services:
   pandora-next:
     image: pengzhile/pandora-next
     container_name: PandoraNext
-    network_mode: host
+    network_mode: bridge
     restart: always
     ports:
       - "8181:80"
