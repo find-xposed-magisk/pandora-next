@@ -11,12 +11,12 @@
 
 ```bash
 $ docker pull pengzhile/pandora-next
-$ docker run -d --restart always --name PandoraNext --net=bridge -p 8181:80 \
+$ docker run -d --restart always --name PandoraNext --net=bridge -p 8181:8181 \
              -e PANDORA_NEXT_LICENSE="<JWT Token>" pengzhile/pandora-next
 
 ```
 
-* 容器内默认监听`80`端口，映射宿主机的`8181`端口，可自行修改。
+* 容器内默认监听`8181`端口，映射宿主机的`8181`端口，可自行修改。
 * 你可以映射目录到容器内的`/data`目录，`config.json`和`tokens.json`放在其中。
 * 自行使用真实的`JWT Token`替换命令中的`<JWT Token>`，没有`<`和`>`，不要搞错。
 
@@ -31,7 +31,7 @@ services:
     network_mode: bridge
     restart: always
     ports:
-      - "8181:80"
+      - "8181:8181"
     environment:
       - PANDORA_NEXT_LICENSE=<JWT Token>
 ```
@@ -42,7 +42,7 @@ services:
 
 ```json
 {
-  "bind": "0.0.0.0:80",
+  "bind": "0.0.0.0:8181",
   "timeout": 600,
   "proxy_url": ""
 }
