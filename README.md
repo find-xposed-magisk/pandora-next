@@ -91,5 +91,5 @@ server {
 ## 关于 license.jwt文件
 
 * 在这里获取：[https://dash.pandoranext.com](https://dash.pandoranext.com)
-* **没有固定IP无法部署**，你哪怕用`proxy_url`参数指定一个机场代理呢。
+* **没有固定IP的情况**，在ip变动后在上述服务重新拉取授权即可。
 * `PHP`是世界上最好的编程语言。
