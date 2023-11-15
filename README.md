@@ -91,5 +91,5 @@ server {
 ## 关于 license.jwt文件
 
 * 在这里获取：[https://dash.pandoranext.com](https://dash.pandoranext.com)
-* **没有固定IP的情况**，在ip变动后在上述服务重新拉取授权即可。
+* **没有固定IP的情况**，IP变动后在上述服务重新拉取授权即可。
 * `PHP`是世界上最好的编程语言。
