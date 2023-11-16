@@ -91,6 +91,38 @@ server {
 * 以上仅为推荐配置，可根据具体情况进行改动。
 * 建议开启`ssl`也即`https`，否则浏览器限制将无法复制网页内容。
 
+## tokens 配置
+
+* 以下是一个示例`tokens.json`文件
+
+```json
+{
+  "test-1": {
+    "token": "access token / session token / refresh token / share token",
+    "shared": true,
+    "show_user_info": false
+  },
+  "test-2": {
+    "token": "access token / session token / refresh token / share token",
+    "shared": true,
+    "show_user_info": true,
+    "plus": true
+  },
+  "test2": {
+    "token": "access token / session token / refresh token / share token",
+    "password": "12345"
+  }
+}
+```
+
+* `token`支持示例文件中所写的所有类型。
+* 每个key被称为`token key`，可在登录框作用户名输入。如上：`test-1`、`test-2`等。
+* 如果设置了`password`则输入完`token key`进入输入密码页面输入。
+* 如果设置`shared`为真，则这个账号会出现在`/shared.html`中，登录页面会出现它的链接。
+* `/shared.html`中的账号和共享站功能相同，可以自行设置隔离密码进行会话隔离。
+* `plus`用来标识`/shared.html`上账号是否有金光。
+* `show_user_info`表示共享时是否显示账号邮箱信息，GPTs建议开启。
+
 ## 关于 license.jwt文件
 
 * 在这里获取：[https://dash.pandoranext.com](https://dash.pandoranext.com)
