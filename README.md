@@ -145,6 +145,7 @@ server {
 * 每个key被称为`token key`，可在登录框作用户名输入。如上：`test-1`、`test-2`等。
 * 如果设置了`password`则输入完`token key`进入输入密码页面输入匹配。
 * 如果设置`shared`为`true`，则这个账号会出现在`/shared.html`中，登录页面会出现它的链接。
+* 如果设置`shared`为`true`，则这个账号不能再在用户名登录框进行登录。
 * `/shared.html`中的账号和共享站功能相同，可以自行设置隔离密码进行会话隔离。
 * `plus`用来标识`/shared.html`上账号是否有金光，没有其他作用。
 * `show_user_info`表示`/shared.html`共享时是否显示账号邮箱信息，GPTs建议开启。
