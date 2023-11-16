@@ -42,9 +42,12 @@ services:
 
 ```json
 {
-  "bind": "0.0.0.0:8181",
+  "bind": "127.0.0.1:8181",
   "timeout": 600,
-  "proxy_url": ""
+  "proxy_url": "",
+  "public_share": false,
+  "site_password": "",
+  "whitelist": null
 }
 ```
 
