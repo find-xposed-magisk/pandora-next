@@ -38,18 +38,7 @@ services:
 
 * 对照上述`Docker 部署`的内容自行修改。
 
-* 如果你映射了`/data`目录，要提供`config.json`，这是一个示例：
-
-```json
-{
-  "bind": "127.0.0.1:8181",
-  "timeout": 600,
-  "proxy_url": "",
-  "public_share": false,
-  "site_password": "",
-  "whitelist": null
-}
-```
+* 如果你映射了`/data`目录，要提供`config.json`，同样`tokens.json`也放在这里。
 
 ## Nginx 配置
 
@@ -90,6 +79,29 @@ server {
 * Nginx建议开启`http2`。
 * 以上仅为推荐配置，可根据具体情况进行改动。
 * 建议开启`ssl`也即`https`，否则浏览器限制将无法复制网页内容。
+
+## config 配置
+
+* 以下是一个示例`config.json`文件
+
+```json
+{
+  "bind": "127.0.0.1:8181",
+  "timeout": 600,
+  "proxy_url": "",
+  "public_share": false,
+  "site_password": "",
+  "whitelist": null
+}
+```
+
+* `bind`指定绑定IP和端口，在docker内，IP只能用`0.0.0.0`，否则映射不出来。
+* `timeout`是请求的超时时间，单位为`秒`。
+* `proxy_url`指定部署服务流量走代理，如：`http://127.0.0.1:8888`、`socks5://127.0.0.1:7980`
+* `public_share`对于GPT中创建的对话分享，是否需要登录才能查看。为`true`则无需登录即可查看。
+* `site_password`设置整站密码，需要先输入这个密码，正确才能进行后续步骤。
+* `whitelist`指定哪些用户邮箱可以登录使用，用户名/密码登录受限制，各种Token登录受限。内置tokens不受限。
+* `whitelist`为`null`则不限制，为空数组`[]`则限制所有账号，同样内置tokens不受限。
 
 ## tokens 配置
 
