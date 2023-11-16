@@ -1,5 +1,18 @@
 # PandoraNext
 
+## 简单介绍
+
+* Pandora Cloud + Pandora Server + Shared Chat = PandoraNext
+* 支持GPTs，最新UI。
+* 支持多种登录方式：（相当于Pandora Cloud）
+  * 账号/密码
+  * Access Token
+  * Session Token
+  * Refresh Token
+  * Share Token
+* 可内置tokens（可使用上述所有Token），支持设置密码。（相当于Pandora Server）
+* 可配置共享的tokens，会有一个功能等同`chat-shared3.zhile.io`的共享站。
+
 ## 手动部署
 
 * 在[Releases](https://github.com/pandora-next/deploy/releases)中下载对应操作系统和架构的包。
