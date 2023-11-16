@@ -147,7 +147,7 @@ server {
 * 如果设置`shared`为`true`，则这个账号会出现在`/shared.html`中，登录页面会出现它的链接。
 * `/shared.html`中的账号和共享站功能相同，可以自行设置隔离密码进行会话隔离。
 * `plus`用来标识`/shared.html`上账号是否有金光，没有其他作用。
-* `show_user_info`表示共享时是否显示账号邮箱信息，GPTs建议开启。
+* `show_user_info`表示`/shared.html`共享时是否显示账号邮箱信息，GPTs建议开启。
 
 ## 关于 license.jwt文件
 
