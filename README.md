@@ -12,6 +12,7 @@
   * Share Token
 * 可内置tokens（可使用上述所有Token），支持设置密码。（相当于Pandora Server）
 * 可配置共享的tokens，会有一个功能等同`chat-shared3.zhile.io`的共享站。
+* 为全代理模式，你的用户只需要跟你的部署网络能通即可。
 
 ## 手动部署
 
@@ -112,7 +113,7 @@ server {
 * `timeout`是请求的超时时间，单位为`秒`。
 * `proxy_url`指定部署服务流量走代理，如：`http://127.0.0.1:8888`、`socks5://127.0.0.1:7980`
 * `public_share`对于GPT中创建的对话分享，是否需要登录才能查看。为`true`则无需登录即可查看。
-* `site_password`设置整站密码，需要先输入这个密码，正确才能进行后续步骤。
+* `site_password`设置整站密码，需要先输入这个密码，正确才能进行后续步骤。充分保障私密性。
 * `whitelist`指定哪些用户邮箱可以登录使用，用户名/密码登录受限制，各种Token登录受限。内置tokens不受限。
 * `whitelist`为`null`则不限制，为空数组`[]`则限制所有账号，同样内置tokens不受限。
 
