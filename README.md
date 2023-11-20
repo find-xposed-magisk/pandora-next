@@ -159,7 +159,7 @@ server {
 * 热更新`config`、`tokens`和`license`
 
 ```bash
-$ curl -H 'Authorization: Bearer <setup_password>' -X POST '<Base URL>/setup/reload'
+$ curl -H "Authorization: Bearer <setup_password>" -X POST "<Base URL>/setup/reload"
 ```
 
 ## 关于 license.jwt文件
