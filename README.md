@@ -32,7 +32,7 @@ $ docker run -d --restart always --name PandoraNext --net=bridge -p 8181:8181 \
 ```
 
 * 容器内默认监听`8181`端口，映射宿主机的`8181`端口，可自行修改。
-* 你可以映射目录到容器内的`/data`目录，`config.json`和`tokens.json`放在其中。
+* 你可以映射目录到容器内的`/data`目录，`config.json`、`tokens.json`和`license.jwt`放在其中。
 * 自行使用真实的`JWT Token`替换命令中的`<JWT Token>`，没有`<`和`>`，不要搞错。
 
 ## Docker Compose 模版
@@ -106,6 +106,7 @@ server {
   "proxy_url": "",
   "public_share": false,
   "site_password": "",
+  "setup_password": "",
   "whitelist": null
 }
 ```
@@ -115,6 +116,7 @@ server {
 * `proxy_url`指定部署服务流量走代理，如：`http://127.0.0.1:8888`、`socks5://127.0.0.1:7980`
 * `public_share`对于GPT中创建的对话分享，是否需要登录才能查看。为`true`则无需登录即可查看。
 * `site_password`设置整站密码，需要先输入这个密码，正确才能进行后续步骤。充分保障私密性。
+* `setup_password`定义一个设置密码，用于调用`/setup/`开头的设置接口，为空则不可调用。
 * `whitelist`邮箱数组指定哪些用户可以登录使用，用户名/密码登录受限制，各种Token登录受限。内置tokens不受限。
 * `whitelist`为`null`则不限制，为空数组`[]`则限制所有账号，同样内置tokens不受限。
 
@@ -150,6 +152,14 @@ server {
 * `/shared.html`中的账号和共享站功能相同，可以自行设置隔离密码进行会话隔离。
 * `plus`用来标识`/shared.html`上账号是否有金光，没有其他作用。
 * `show_user_info`表示`/shared.html`共享时是否显示账号邮箱信息，GPTs建议开启。
+
+## 设置接口
+
+* 热更新`config`、`tokens`和`license`
+
+```bash
+$ curl -H 'Authorization: Bearer <setup_password>' -X POST '<Base URL>/setup/reload'
+```
 
 ## 关于 license.jwt文件
 
