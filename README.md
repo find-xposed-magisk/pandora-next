@@ -155,6 +155,7 @@ server {
 
 ## 设置接口
 
+* 必须先在`config.json`中设置`setup_password`为非空！
 * 热更新`config`、`tokens`和`license`
 
 ```bash
