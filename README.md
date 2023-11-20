@@ -125,12 +125,12 @@ server {
 ```json
 {
   "test-1": {
-    "token": "access token / session token / refresh token / share token",
+    "token": "access token / session token / refresh token",
     "shared": true,
     "show_user_info": false
   },
   "test-2": {
-    "token": "access token / session token / refresh token / share token",
+    "token": "access token / session token / refresh token",
     "shared": true,
     "show_user_info": true,
     "plus": true
