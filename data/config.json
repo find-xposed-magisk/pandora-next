@@ -4,5 +4,6 @@
   "proxy_url": "",
   "public_share": false,
   "site_password": "",
+  "setup_password": "",
   "whitelist": null
 }
