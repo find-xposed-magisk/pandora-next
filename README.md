@@ -107,6 +107,7 @@ server {
   "public_share": false,
   "site_password": "",
   "setup_password": "",
+  "server_tokens": true,
   "whitelist": null
 }
 ```
@@ -117,6 +118,7 @@ server {
 * `public_share`对于GPT中创建的对话分享，是否需要登录才能查看。为`true`则无需登录即可查看。
 * `site_password`设置整站密码，需要先输入这个密码，正确才能进行后续步骤。充分保障私密性。
 * `setup_password`定义一个设置密码，用于调用`/setup/`开头的设置接口，为空则不可调用。
+* `server_tokens`设置是否在响应头中显示版本号，`true`显示，`false`则不显示。
 * `whitelist`邮箱数组指定哪些用户可以登录使用，用户名/密码登录受限制，各种Token登录受限。内置tokens不受限。
 * `whitelist`为`null`则不限制，为空数组`[]`则限制所有账号，同样内置tokens不受限。
 
