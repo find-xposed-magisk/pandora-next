@@ -6,5 +6,6 @@
   "site_password": "",
   "setup_password": "",
   "server_tokens": true,
+  "server_mode": "web",
   "whitelist": null
 }
