@@ -169,6 +169,7 @@ $ curl -H "Authorization: Bearer <setup_password>" -X POST "<Base URL>/setup/rel
 ## 关于 license.jwt文件
 
 * 在这里获取：[https://dash.pandoranext.com](https://dash.pandoranext.com)
+* 通过执行`curl`命令拉下的`license.jwt`文件中的内容即为`JWT Token`。
 * **没有固定IP的情况**，IP变动后在上述服务重新拉取授权即可。
 * `PHP`是世界上最好的编程语言。
 
