@@ -26,8 +26,7 @@
 
 ```bash
 $ docker pull pengzhile/pandora-next
-$ docker run -d --restart always --name PandoraNext --net=bridge -p 8181:8181 \
-             -e PANDORA_NEXT_LICENSE="<JWT Token>" pengzhile/pandora-next
+$ docker run -d --restart always --name PandoraNext --net=bridge -p 8181:8181 pengzhile/pandora-next
 
 ```
 
