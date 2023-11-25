@@ -149,7 +149,7 @@ server {
 ```
 
 * `token`支持示例文件中所写的所有类型。`session token`和`refresh token`可自动刷新。
-* 每个key被称为`token key`，可在登录框作用户名输入。如上：`test-1`、`test-2`等。
+* 每个key被称为`token key`，可在登录框作用户名输入。如上：`test-1`、`test-2`等，随意更改。
 * 如果设置了`password`则输入完`token key`进入输入密码页面输入匹配。
 * 如果设置`shared`为`true`，则这个账号会出现在`/shared.html`中，登录页面会出现它的链接。
 * 如果设置`shared`为`true`，则这个账号不能再在用户名登录框进行登录。
