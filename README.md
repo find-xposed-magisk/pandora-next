@@ -28,7 +28,7 @@
 
 * 仓库内已包含相关文件和目录，拉到本地，获取`license.jwt`替换`data`目录中的那个。
 * `data`目录中包含`config.json`、`tokens.json`示例文件、`license.jwt`可自行修改。
-* **原神启动！**
+* `docker-compose up -d` **原神启动！**
 
 ## Docker 部署
 
