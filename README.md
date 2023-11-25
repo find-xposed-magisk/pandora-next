@@ -26,7 +26,7 @@
 
 ## Docker Compose 部署
 
-* 仓库内已包含相关文件和目录，拉到本地，获取`license.jwt`替换`data`目录中的那个。
+* 仓库内已包含相关文件和目录，拉到本地，[获取license.jwt](#%E5%85%B3%E4%BA%8E-licensejwt-%E6%96%87%E4%BB%B6)替换`data`目录中的那个。
 * `data`目录中包含`config.json`、`tokens.json`示例文件、`license.jwt`可自行修改。
 * `docker-compose up -d` **原神启动！**
 
@@ -42,7 +42,7 @@ $ docker run -d --restart always --name PandoraNext --net=bridge \
 ```
 
 * 容器内默认监听`8181`端口，映射宿主机的`8181`端口，可自行修改。
-* 你可以映射目录到容器内的`/data`目录，`config.json`、`tokens.json`和`license.jwt`放在其中。
+* 你可以映射目录到容器内的`/data`目录，`config.json`、`tokens.json`和[license.jwt文件](#%E5%85%B3%E4%BA%8E-licensejwt-%E6%96%87%E4%BB%B6)放在其中。
 * 你可以映射目录到容器内的`/root/.cache/PandoraNext`目录，保留登录的`session`，避免重启容器登录状态丢失。
 
 ## Nginx 配置
