@@ -7,7 +7,6 @@ services:
     restart: always
     ports:
       - "8181:8181"
-    environment:
-      - PANDORA_NEXT_LICENSE=<JWT Token>
     volumes:
       - ./data:/data
+      - ./sessions:/root/.cache/PandoraNext
