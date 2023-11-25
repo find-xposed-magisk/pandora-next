@@ -37,25 +37,11 @@ $ docker run -d --restart always --name PandoraNext --net=bridge \
 * 你可以映射目录到容器内的`/data`目录，`config.json`、`tokens.json`和`license.jwt`放在其中。
 * 你可以映射目录到容器内的`/root/.cache/PandoraNext`目录，保留登录的`session`，避免重启容器登录状态丢失。
 
-## Docker Compose 模版
+## Docker Compose 部署
 
-```yaml
-version: '3'
-services:
-  pandora-next:
-    image: pengzhile/pandora-next
-    container_name: PandoraNext
-    network_mode: bridge
-    restart: always
-    ports:
-      - "8181:8181"
-    environment:
-      - PANDORA_NEXT_LICENSE=<JWT Token>
-```
-
-* 对照上述`Docker 部署`的内容自行修改。
-
-* 如果你映射了`/data`目录，要提供`config.json`，同样`tokens.json`也放在这里。
+* 仓库内已包含相关文件和目录，拉到本地，获取`license.jwt`替换`data`目录中的那个。
+* `data`目录中包含`config.json`、`tokens.json`示例文件、`license.jwt`可自行修改。
+* 原神启动！
 
 ## Nginx 配置
 
