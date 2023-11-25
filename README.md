@@ -26,7 +26,7 @@
 
 * 仓库内已包含相关文件和目录，拉到本地，获取`license.jwt`替换`data`目录中的那个。
 * `data`目录中包含`config.json`、`tokens.json`示例文件、`license.jwt`可自行修改。
-* 原神启动！
+* **原神启动！**
 
 ## Docker 部署
 
@@ -154,13 +154,15 @@ server {
 $ curl -H "Authorization: Bearer <setup_password>" -X POST "<Base URL>/setup/reload"
 ```
 
-## 关于 license.jwt文件
+## 关于 license.jwt 文件
 
 * 在这里获取：[https://dash.pandoranext.com](https://dash.pandoranext.com)
 * 通过执行`curl`命令拉下的`license.jwt`文件中的内容即为`JWT Token`。
 * **没有固定IP的情况**，IP变动后在上述服务重新拉取授权即可。
 
 ## 其他说明
+
+* 如果你发现网页上不能复制，开启`https`或者使用`127.0.0.1`。
 * 如果你正在自定义页面元素，请保留：
   * `Powered by PandoraNext`文字和链接。
   * `About PandoraNext`文字和链接。
