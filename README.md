@@ -113,7 +113,8 @@ server {
 * `server_tokens`设置是否在响应头中显示版本号，`true`显示，`false`则不显示。
 * `server_mode`默认为`web`模式，新增`proxy`模式，可以将你部署的服务当作一个`ChatGPT`接口反代使用。会话额度消耗为`4`倍，无并发限制。
 * `whitelist`邮箱数组指定哪些用户可以登录使用，用户名/密码登录受限制，各种Token登录受限。内置tokens不受限。
-* `whitelist`为`null`则不限制，为空数组`[]`则限制所有账号，同样内置tokens不受限。
+* `whitelist`为`null`则不限制，为空数组`[]`则限制所有账号，内置tokens不受限。
+* 一个`whitelist`的例子：```"whitelist": ["mail2@test.com", "mail2@test.com"]```
 
 ## tokens 配置
 
