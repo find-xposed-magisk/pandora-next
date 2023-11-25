@@ -26,8 +26,11 @@
 
 ```bash
 $ docker pull pengzhile/pandora-next
-$ docker run -d --restart always --name PandoraNext --net=bridge -p 8181:8181 pengzhile/pandora-next
-
+$ docker run -d --restart always --name PandoraNext --net=bridge \
+    -p 8181:8181 \
+    -v ./data:/data \
+    -v ./sessions:/root/.cache/PandoraNext \
+    pengzhile/pandora-next
 ```
 
 * 容器内默认监听`8181`端口，映射宿主机的`8181`端口，可自行修改。
