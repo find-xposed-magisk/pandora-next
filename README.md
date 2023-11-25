@@ -153,6 +153,8 @@ server {
 
 * 必须先在`config.json`中设置`setup_password`为非空！
 * 热更新`config`、`tokens`和`license`
+* 热更新不会重启服务，访问不会被中断。
+* 以下是调用示例，`<Base URL>`是你部署服务的地址。
 
 ```bash
 $ curl -H "Authorization: Bearer <setup_password>" -X POST "<Base URL>/setup/reload"
@@ -161,8 +163,8 @@ $ curl -H "Authorization: Bearer <setup_password>" -X POST "<Base URL>/setup/rel
 ## 关于 license.jwt 文件
 
 * 在这里获取：[https://dash.pandoranext.com](https://dash.pandoranext.com)
-* 通过执行`curl`命令拉下的`license.jwt`文件中的内容即为`JWT Token`。
-* **没有固定IP的情况**，IP变动后在上述服务重新拉取授权即可。
+* 通过执行`curl`命令会在**当前目录**拉下一个名为`license.jwt`的文件。
+* **没有固定IP的情况**，IP变动后在上述服务重新拉取授权，再调用`/setup/reload`接口即可。
 
 ## 其他说明
 
