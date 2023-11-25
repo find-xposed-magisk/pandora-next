@@ -19,7 +19,7 @@
 
 * 在[Releases](https://github.com/pandora-next/deploy/releases)中下载对应操作系统和架构的包。
 * 解压后修改同目录中的`config.json`至你需要的参数。
-* [获取license.jwt](#%E5%85%B3%E4%BA%8E-licensejwt%E6%96%87%E4%BB%B6)文件放在同目录中。
+* [获取license.jwt文件](#%E5%85%B3%E4%BA%8E-licensejwt%E6%96%87%E4%BB%B6)放在同目录中。
 * 启动`PandoraNext`或`PandoraNext.exe`即可。
 
 ## Docker 部署
