@@ -20,13 +20,13 @@
 
 * 在[Releases](https://github.com/pandora-next/deploy/releases)中下载对应操作系统和架构的包。
 * 解压后修改同目录中的`config.json`至你需要的参数。
-* [获取license.jwt文件](#%E5%85%B3%E4%BA%8E-license_id)放在同目录中，这是必须的前置步骤！
+* [获取license_id](#%E5%85%B3%E4%BA%8E-license_id)填写在`config.json`中，这是必须的前置步骤！
 * 各种Linux/Unix系统使用`./PandoraNext`启动即可。
 * Windows系统双击`PandoraNext.exe`即可，当然最好在cmd中启动。
 
 ## Docker Compose 部署
 
-* 仓库内已包含相关文件和目录，拉到本地，[获取license.jwt](#%E5%85%B3%E4%BA%8E-licensejwt-%E6%96%87%E4%BB%B6)替换`data`目录中的那个。
+* 仓库内已包含相关文件和目录，拉到本地，[获取license_id](#%E5%85%B3%E4%BA%8E-license_id)填写在`data/config.json`中。
 * `data`目录中包含`config.json`、`tokens.json`示例文件、`license.jwt`可自行修改。
 * `docker-compose up -d` **原神启动！**
 
@@ -42,7 +42,7 @@ $ docker run -d --restart always --name PandoraNext --net=bridge \
 ```
 
 * 容器内默认监听`8181`端口，映射宿主机的`8181`端口，可自行修改。
-* 你可以映射目录到容器内的`/data`目录，`config.json`、`tokens.json`和[license.jwt文件](#%E5%85%B3%E4%BA%8E-licensejwt-%E6%96%87%E4%BB%B6)放在其中。
+* 你可以映射目录到容器内的`/data`目录，`config.json`、`tokens.json`和[获取license_id](#%E5%85%B3%E4%BA%8E-license_id)填写在`config.json`中。
 * 你可以映射目录到容器内的`/root/.cache/PandoraNext`目录，保留登录的`session`，避免重启容器登录状态丢失。
 
 ## Nginx 配置
