@@ -27,7 +27,7 @@
 ## Docker Compose 部署
 
 * 仓库内已包含相关文件和目录，拉到本地，[获取license_id](#%E5%85%B3%E4%BA%8E-license_id)填写在`data/config.json`中。
-* `data`目录中包含`config.json`、`tokens.json`示例文件、`license.jwt`可自行修改。
+* `data`目录中包含`config.json`、`tokens.json`示例文件可自行修改。
 * `docker-compose up -d` **原神启动！**
 
 ## Docker 部署
@@ -107,11 +107,20 @@ server {
 * **如果你不打算套nginx等反代，`bind`参数的IP请使用`0.0.0.0`！！！**
 * `timeout`是请求的超时时间，单位为`秒`。
 * `proxy_url`指定部署服务流量走代理，如：`http://127.0.0.1:8888`、`socks5://127.0.0.1:7980`
+* `license_id`指定你的License Id，可以在[这里获取](#%E5%85%B3%E4%BA%8E-license_id)。
 * `public_share`对于GPT中创建的对话分享，是否需要登录才能查看。为`true`则无需登录即可查看。
 * `site_password`设置整站密码，需要先输入这个密码，正确才能进行后续步骤。充分保障私密性。
 * `setup_password`定义一个设置密码，用于调用`/setup/`开头的设置接口，为空则不可调用。
 * `server_tokens`设置是否在响应头中显示版本号，`true`显示，`false`则不显示。
 * `server_mode`默认为`web`模式，新增`proxy`模式，可以将你部署的服务当作一个`ChatGPT`接口反代使用。会话额度消耗为`4`倍，无并发限制。
+* `captcha`配置一些关键页面的验证码。
+    * `provider`验证码提供商，支持：`recaptcha_v2`、`recaptcha_enterprise`、`hcaptcha`、`turnstile`、`friendly_captcha`。
+    * `site_key`验证码供应商后台获取的网站参数，是可以公布的信息。
+    * `site_secret`验证码供应商后台获取的秘密参数，不要公布出来。有些供应商也称作`API Key`。
+    * `site_login`是否在全站密码登录界面显示验证码，`true`或`false`。
+    * `setup_login`是否在设置入口登录界面显示验证码，`true`或`false`。
+    * `oai_username`是否输入用户名界面显示验证码，`true`或`false`。
+    * `oai_password`是否在输入登录密码界面显示验证码，`true`或`false`。
 * `whitelist`邮箱数组指定哪些用户可以登录使用，用户名/密码登录受限制，各种Token登录受限。内置tokens不受限。
 * `whitelist`为`null`则不限制，为空数组`[]`则限制所有账号，内置tokens不受限。
 * 一个`whitelist`的例子：```"whitelist": ["mail2@test.com", "mail2@test.com"]```
