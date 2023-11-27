@@ -11,7 +11,7 @@
   * Refresh Token
   * Share Token
 * 可内置tokens（可使用上述所有Token），支持设置密码。（相当于Pandora Server）
-* 可配置共享的tokens，会有一个功能等同[chat-shared3.zhile.io](https://chat-shared3.zhile.io)的共享站（目前4331个普号、116个Plus）。
+* 可配置共享的tokens，会有一个功能等同[chat-shared3.zhile.io](https://chat-shared3.zhile.io)的共享站（目前2622个普号、22个Plus）。
 * 为全代理模式，你的用户只需要跟你的部署网络能通即可。
 * 可启动为BackendAPI Proxy模式，直接使用`Access Token`调用`/backend-api/`的接口。
 * 还有疑问，那就进Telegram群让大家围观围观：[@ja_netfilter_group](https://t.me/ja_netfilter_group)
