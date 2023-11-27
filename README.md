@@ -178,6 +178,7 @@ server {
 * 在这里获取：[https://dash.pandoranext.com](https://dash.pandoranext.com)
 * 复制`License Id:`后的内容，填写在`config.json`的`license_id`字段。
 * 注意检查不要复制到多余的空格等不可见字符。
+* 如果`config.json`中没有填写`license_id`字段，启动会报错`License ID is required`。
 * **没有固定IP的情况**，IP变动后会自动尝试重新拉取。
 
 ## 其他说明
