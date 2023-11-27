@@ -149,22 +149,16 @@ server {
 * `plus`用来标识`/shared.html`上账号是否有金光，没有其他作用。
 * `show_user_info`表示`/shared.html`共享时是否显示账号邮箱信息，GPTs建议开启。
 
-## 设置接口
+## 设置界面
 
 * 必须先在`config.json`中设置`setup_password`为非空！
-* 热更新`config`、`tokens`和`license`
-* 热更新不会重启服务，访问不会被中断。
-* 以下是调用示例，`<Base URL>`是你部署服务的地址。
+* 浏览器打开：`<Base URL>/setup`，其中`<Base URL>`是你部署服务的地址。
 
-```bash
-$ curl -H "Authorization: Bearer <setup_password>" -X POST "<Base URL>/setup/reload"
-```
-
-## 关于 license.jwt 文件
+## 关于 license_id
 
 * 在这里获取：[https://dash.pandoranext.com](https://dash.pandoranext.com)
-* 通过执行`curl`命令会在**当前目录**拉下一个名为`license.jwt`的文件。
-* **没有固定IP的情况**，IP变动后在上述服务重新拉取授权，再调用`/setup/reload`接口即可。
+* 复制`License Id:`后的内容，填写在`config.json`的`license_id`字段。
+* **没有固定IP的情况**，IP变动后会自动尝试重新拉取。
 
 ## 其他说明
 
