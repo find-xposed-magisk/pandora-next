@@ -1,5 +1,7 @@
 # PandoraNext
 
+### ✨ [PandoraNext助手GPTs](https://chat1.zhile.io/g/g-CFsXuTRfy-pandoranextzhu-shou)，如果你有Plus账号，可以向它求助项目问题。
+
 ## 简单介绍
 
 * Pandora Cloud + Pandora Server + Shared Chat + BackendAPI Proxy = `PandoraNext`（[演示站](https://chat1.zhile.io)）
