@@ -94,6 +94,11 @@ server {
 ```json
 {
   "bind": "127.0.0.1:8181",
+  "tls": {
+    "enabled": false,
+    "cert_file": "",
+    "key_file": ""
+  },
   "timeout": 600,
   "proxy_url": "",
   "license_id": "",
