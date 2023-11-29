@@ -136,6 +136,8 @@ server {
 * `setup_password`定义一个设置密码，用于调用`/setup/`开头的设置接口，为空则不可调用。
 * `server_tokens`设置是否在响应头中显示版本号，`true`显示，`false`则不显示。
 * `server_mode`默认为`web`模式，新增`proxy`模式，可以将你部署的服务当作一个`ChatGPT`接口反代使用。会话额度消耗为`4`倍，无并发限制。
+* `proxy_api_prefix`可以给你的`proxy`模式接口地址添加前缀，让人意想不到。注意设置的字符应该是url中允许的字符。
+* `isolated_conv_title`现在隔离会话可以设置标题了，而不再是千篇一律的`*`号。
 * `captcha`配置一些关键页面的验证码。
     * `provider`验证码提供商，支持：`recaptcha_v2`、`recaptcha_enterprise`、`hcaptcha`、`turnstile`、`friendly_captcha`。
     * `site_key`验证码供应商后台获取的网站参数，是可以公布的信息。
