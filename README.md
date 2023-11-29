@@ -4,7 +4,7 @@
 
 ## 简单介绍
 
-* Pandora Cloud + Pandora Server + Shared Chat + BackendAPI Proxy = `PandoraNext`（[演示站](https://chat1.zhile.io)）
+* Pandora Cloud + Pandora Server + Shared Chat + BackendAPI Proxy + Chat2API = `PandoraNext`（[演示站](https://chat1.zhile.io)）
 * 支持GPTs，最新UI。
 * 支持多种登录方式：（相当于Pandora Cloud）
   * 账号/密码
@@ -107,6 +107,8 @@ server {
   "setup_password": "",
   "server_tokens": true,
   "server_mode": "web",
+  "proxy_api_prefix": "",
+  "isolated_conv_title": "*",
   "captcha": {
     "provider": "",
     "site_key": "",
