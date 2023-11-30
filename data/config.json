@@ -12,7 +12,6 @@
   "site_password": "",
   "setup_password": "",
   "server_tokens": true,
-  "server_mode": "web",
   "proxy_api_prefix": "",
   "isolated_conv_title": "*",
   "captcha": {
