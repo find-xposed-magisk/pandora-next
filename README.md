@@ -196,6 +196,7 @@ server {
 * **POST** /api/token/register 生成share token
 * **POST** /api/pool/update 生成更新pool token
 * **POST** /v1/chat/completions 使用`ChatGPT`模拟`API`的请求接口，支持share token和pool token。
+* 以上地址均需在最前面增加 `/<proxy_api_prefix>`，也就是你设置的前缀。
 
 
 ## 设置界面
