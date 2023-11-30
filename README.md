@@ -186,6 +186,18 @@ server {
 * `plus`用来标识`/shared.html`上账号是否有金光，没有其他作用。
 * `show_user_info`表示`/shared.html`共享时是否显示账号邮箱信息，GPTs建议开启。
 
+## proxy模式接口
+* /backend-api/* `ChatGPT`网页版接口，具体F12去页面上看。
+* /public-api/* `ChatGPT`网页版接口，具体F12去页面上看。
+* **GET** /api/token/info/fk-xxx 获取share token信息，使用生成人的access token做为Authorization头，可查看各模型用量。
+* **POST** /api/auth/session 通过session token获取access token，使用urlencode form传递session_token参数。
+* **POST** /api/auth/refresh 通过refresh token获取access token，使用urlencode form传递refresh_token参数。
+* **POST** /api/auth/login 登录获取access token，使用urlencode form传递username 和 password 参数。
+* **POST** /api/token/register 生成share token
+* **POST** /api/pool/update 生成更新pool token
+* **POST** /v1/chat/completions 使用`ChatGPT`模拟`API`的请求接口，支持share token和pool token。
+
+
 ## 设置界面
 
 * 必须先在`config.json`中设置`setup_password`为非空！
