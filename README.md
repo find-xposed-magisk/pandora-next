@@ -134,8 +134,12 @@ server {
 * `site_password`设置整站密码，需要先输入这个密码，正确才能进行后续步骤。充分保障私密性。
 * `setup_password`定义一个设置密码，用于调用`/setup/`开头的设置接口，为空则不可调用。
 * `server_tokens`设置是否在响应头中显示版本号，`true`显示，`false`则不显示。
-* `proxy_api_prefix`可以给你的`proxy`模式接口地址添加前缀，让人意想不到。注意设置的字符应该是url中允许的字符。
+* `proxy_api_prefix`可以给你的`proxy`模式接口地址添加前缀，让人意想不到。注意设置的字符应该是url中允许的字符。包括：`a-z` `A-Z` `0-9` `-` `_` `.` `~`
 * `proxy_api_prefix` 你必须设置一个不少于`8`位，且同时包含`数字`和`字母`的前缀才能开启`proxy`模式！
+    * `/backend-api/conversation` proxy模式比例 `1:4`
+    * `/v1/chat/completions` 3.5模型比例 `1:4`
+    * `/v1/chat/completions` 4模型比例 `1:10`, 无需打码
+    * `/api/auth/login` 登录接口比例 `1:100`，无需打码
 * `isolated_conv_title`现在隔离会话可以设置标题了，而不再是千篇一律的`*`号。
 * `captcha`配置一些关键页面的验证码。
     * `provider`验证码提供商，支持：`recaptcha_v2`、`recaptcha_enterprise`、`hcaptcha`、`turnstile`、`friendly_captcha`。
