@@ -140,6 +140,7 @@ server {
     * `/v1/chat/completions` 3.5模型比例 `1:4`
     * `/v1/chat/completions` 4模型比例 `1:10`, 无需打码
     * `/api/auth/login` 登录接口比例 `1:100`，无需打码
+    * `/api/arkose/token` 获取`arkose_token`，比例 `1:10`
 * `isolated_conv_title`现在隔离会话可以设置标题了，而不再是千篇一律的`*`号。
 * `captcha`配置一些关键页面的验证码。
     * `provider`验证码提供商，支持：`recaptcha_v2`、`recaptcha_enterprise`、`hcaptcha`、`turnstile`、`friendly_captcha`。
