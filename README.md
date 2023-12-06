@@ -153,6 +153,7 @@ server {
 * `whitelist`邮箱数组指定哪些用户可以登录使用，用户名/密码登录受限制，各种Token登录受限。内置tokens不受限。
 * `whitelist`为`null`则不限制，为空数组`[]`则限制所有账号，内置tokens不受限。
 * 一个`whitelist`的例子：```"whitelist": ["mail2@test.com", "mail2@test.com"]```
+* 如果你希望从`SQLite`读取tokens，程序启动时指定参数`-token tokens.db`，文件名随意，后缀需要`.db`
 
 ## tokens 配置
 
