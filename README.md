@@ -186,7 +186,8 @@ server {
 * `/shared.html`中的账号和共享站功能相同，可以自行设置隔离密码进行会话隔离。
 * `plus`用来标识`/shared.html`上账号是否有金光，没有其他作用。
 * `show_user_info`表示`/shared.html`共享时是否显示账号邮箱信息，GPTs建议开启。
-* 现在可以直接内置用户名密码登录，此种方法必须设置`password`且`shared`不可为`true`。格式为：`邮箱,密码`
+* 现在可以直接内置用户名密码登录，此种方法必须设置`password`且`shared`不可为`true`。
+* 内置账号密码的格式为：`邮箱,密码`，此种是`0`额度消耗的。
 
 ## proxy模式接口
 * /backend-api/* `ChatGPT`网页版接口，具体F12去页面上看。
