@@ -30,6 +30,7 @@
 
 * 仓库内已包含相关文件和目录，拉到本地，[获取license_id](#%E5%85%B3%E4%BA%8E-license_id)填写在`data/config.json`中。
 * `data`目录中包含`config.json`、`tokens.json`示例文件可自行修改。
+* 如果希望从`SQLite`中读取tokens，请设置环境变量`PANDORA_NEXT_USE_SQLITE=1`
 * `docker-compose up -d` **原神启动！**
 
 ## Docker 部署
@@ -46,6 +47,7 @@ $ docker run -d --restart always --name PandoraNext --net=bridge \
 * 容器内默认监听`8181`端口，映射宿主机的`8181`端口，可自行修改。
 * 你可以映射目录到容器内的`/data`目录，`config.json`、`tokens.json`和[获取license_id](#%E5%85%B3%E4%BA%8E-license_id)填写在`config.json`中。
 * 你可以映射目录到容器内的`/root/.cache/PandoraNext`目录，保留登录的`session`，避免重启容器登录状态丢失。
+* 如果希望从`SQLite`中读取tokens，请设置环境变量`PANDORA_NEXT_USE_SQLITE=1`
 
 ## Nginx 配置
 
