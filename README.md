@@ -200,6 +200,7 @@ server {
 * **POST** /api/pool/update 生成更新pool token
 * **POST** /v1/chat/completions 使用`ChatGPT`模拟`API`的请求接口，支持share token和pool token。
 * **POST** /api/arkose/token 获取arkose_token，目前只支持`gpt-4`类型。使用urlencode form传递type=gpt-4参数。获取后可API方式调用`GPTs`
+* **POST** /api/setup/reload 重载当前服务的`config.json`、`tokens.json`等配置。
 * 以上地址均需在最前面增加 `/<proxy_api_prefix>`，也就是你设置的前缀。
 
 
