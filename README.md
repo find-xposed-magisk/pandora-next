@@ -1,10 +1,11 @@
 # PandoraNext
 
+### 现在我们可以使用PandoraNext来注册ChatGPT账号了，全代理！
 ### ✨ [PandoraNext助手GPTs](https://chat1.zhile.io/g/g-CFsXuTRfy-pandoranextzhu-shou)，如你有Plus账号，可向它求助项目问题（不要试图套源码）
 
 ## 简单介绍
 
-* Pandora Cloud + Pandora Server + Shared Chat + BackendAPI Proxy + Chat2API = `PandoraNext`（[演示站](https://chat1.zhile.io)）
+* Pandora Cloud + Pandora Server + Shared Chat + BackendAPI Proxy + Chat2API = `PandoraNext`（[演示站](https://chat.oaifree.com)）
 * 支持GPTs，最新UI。
 * 支持多种登录方式：（相当于Pandora Cloud）
   * 账号/密码
@@ -30,7 +31,6 @@
 
 * 仓库内已包含相关文件和目录，拉到本地，[获取license_id](#%E5%85%B3%E4%BA%8E-license_id)填写在`data/config.json`中。
 * `data`目录中包含`config.json`、`tokens.json`示例文件可自行修改。
-* 如果希望从`SQLite`中读取tokens，请设置环境变量`PANDORA_NEXT_USE_SQLITE=1`
 * `docker-compose up -d` **原神启动！**
 
 ## Docker 部署
@@ -47,7 +47,6 @@ $ docker run -d --restart always --name PandoraNext --net=bridge \
 * 容器内默认监听`8181`端口，映射宿主机的`8181`端口，可自行修改。
 * 你可以映射目录到容器内的`/data`目录，`config.json`、`tokens.json`和[获取license_id](#%E5%85%B3%E4%BA%8E-license_id)填写在`config.json`中。
 * 你可以映射目录到容器内的`/root/.cache/PandoraNext`目录，保留登录的`session`，避免重启容器登录状态丢失。
-* 如果希望从`SQLite`中读取tokens，请设置环境变量`PANDORA_NEXT_USE_SQLITE=1`
 
 ## Nginx 配置
 
@@ -117,7 +116,8 @@ server {
     "site_login": false,
     "setup_login": false,
     "oai_username": false,
-    "oai_password": false
+    "oai_password": false,
+    "oai_signup": false
   },
   "whitelist": null
 }
@@ -155,7 +155,6 @@ server {
 * `whitelist`邮箱数组指定哪些用户可以登录使用，用户名/密码登录受限制，各种Token登录受限。内置tokens不受限。
 * `whitelist`为`null`则不限制，为空数组`[]`则限制所有账号，内置tokens不受限。
 * 一个`whitelist`的例子：```"whitelist": ["mail2@test.com", "mail2@test.com"]```
-* 如果你希望从`SQLite`读取tokens，程序启动时指定参数`-token tokens.db`，文件名随意，后缀需要`.db`
 
 ## tokens 配置
 
