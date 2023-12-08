@@ -21,7 +21,8 @@
     "site_login": false,
     "setup_login": false,
     "oai_username": false,
-    "oai_password": false
+    "oai_password": false,
+    "oai_signup": false
   },
   "whitelist": null
 }
