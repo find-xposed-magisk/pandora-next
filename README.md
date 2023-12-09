@@ -1,6 +1,6 @@
 # PandoraNext
 
-## ✨ 现在我们可以使用PandoraNext来注册ChatGPT账号了，全代理！
+## ✨ 现在我们可以使用PandoraNext来[注册ChatGPT账号](https://zhile.io/2023/12/09/pandoranext-introduction.html)了，全代理！
 ### ✨ [PandoraNext助手GPTs](https://chat1.zhile.io/g/g-CFsXuTRfy-pandoranextzhu-shou)，如你有Plus账号，可向它求助项目问题（不要试图套源码）
 
 ## 简单介绍
