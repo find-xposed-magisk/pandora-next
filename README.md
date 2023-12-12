@@ -1,12 +1,12 @@
 # PandoraNext
 
-## ✨ 现在我们可以使用PandoraNext来[注册ChatGPT账号](https://zhile.io/2023/12/09/pandoranext-introduction.html)了，全代理！
+## ✨ 现在我们可以使用PandoraNext [注册ChatGPT账号](https://zhile.io/2023/12/09/pandoranext-introduction.html)了，无墙，全代理！
 ### ✨ [PandoraNext助手GPTs](https://chat1.zhile.io/g/g-CFsXuTRfy-pandoranextzhu-shou)，如你有Plus账号，可向它求助项目问题（不要试图套源码）
 
 ## 简单介绍
 
 * Pandora Cloud + Pandora Server + Shared Chat + BackendAPI Proxy + Chat2API = `PandoraNext`（[演示站](https://chat.oaifree.com)）
-* 支持GPTs，最新UI。
+* 更强大，但还是那个让你呼吸顺畅的ChatGPT。支持GPTs，最新UI。
 * 支持多种登录方式：（相当于Pandora Cloud）
   * 账号/密码
   * Access Token
@@ -15,8 +15,8 @@
   * Share Token
 * 可内置tokens（可使用上述所有Token），支持设置密码。（相当于Pandora Server）
 * 可配置共享的tokens，会有一个功能等同[chat-shared3.zhile.io](https://chat-shared3.zhile.io)的共享站（目前2622个普号、22个Plus）。
-* 为全代理模式，你的用户只需要跟你的部署网络能通即可。
-* 可启动为BackendAPI Proxy模式，直接使用`Access Token`调用`/backend-api/`的接口。
+* 为全代理模式（能想象到的都代理了），你的用户只需要跟你的部署网络能通即可。
+* 可启动为BackendAPI Proxy模式，直接使用`Access Token`调用`/backend-api/`和chat2api的接口。
 * 还有疑问，那就进Telegram群让大家围观围观：[@ja_netfilter_group](https://t.me/ja_netfilter_group)
 
 ## 手动部署
