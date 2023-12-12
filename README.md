@@ -109,6 +109,9 @@ server {
   "server_tokens": true,
   "proxy_api_prefix": "",
   "isolated_conv_title": "*",
+  "disable_signup": false,
+  "auto_conv_arkose": false,
+  "proxy_file_service": false,
   "captcha": {
     "provider": "",
     "site_key": "",
