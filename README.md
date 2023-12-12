@@ -203,6 +203,8 @@ server {
 * 页面 /pk 使用`share token`，手动组`pool token`。
 * /backend-api/* `ChatGPT`网页版接口，具体F12去页面上看。
 * /public-api/* `ChatGPT`网页版接口，具体F12去页面上看。
+* /v1/* 所有`https://api.openai.com/v1/*`开头的接口，每次调用`1:1`。
+* /dashboard/* 所有`https://api.openai.com/dashboard/*`开头的接口，每次调用`1:1`。
 * **GET** /api/token/info/fk-xxx 获取share token信息，使用生成人的access token做为Authorization头，可查看各模型用量。
 * **POST** /api/auth/session 通过session token获取access token，使用urlencode form传递session_token参数。
 * **POST** /api/auth/refresh 通过refresh token获取access token，使用urlencode form传递refresh_token参数。
