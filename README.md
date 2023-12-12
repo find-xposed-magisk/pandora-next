@@ -200,7 +200,7 @@ server {
 ## proxy模式接口
 * 页面 /auth 使用账号密码，手动获取`access token`和`session token`。
 * 页面 /fk 使用`access token`或`session token`，手动获取`share token`，
-* 页面 /sk 使用`share token`，手动组`pool token`。
+* 页面 /pk 使用`share token`，手动组`pool token`。
 * /backend-api/* `ChatGPT`网页版接口，具体F12去页面上看。
 * /public-api/* `ChatGPT`网页版接口，具体F12去页面上看。
 * **GET** /api/token/info/fk-xxx 获取share token信息，使用生成人的access token做为Authorization头，可查看各模型用量。
