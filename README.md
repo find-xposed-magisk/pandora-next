@@ -147,6 +147,9 @@ server {
     * `/api/auth/login` 登录接口比例 `1:100`，无需打码
     * `/api/arkose/token` 获取`arkose_token`，比例 `1:10`
 * `isolated_conv_title`现在隔离会话可以设置标题了，而不再是千篇一律的`*`号。
+* `disable_signup` 禁用注册账号功能，`true`或`false`。
+* `auto_conv_arkose` 在`proxy`模式使用`gpt-4`模型调用`/backend-api/conversation`接口是否自动打码，使用消耗为`4+10`。
+* `proxy_file_service` 在`proxy`模式是否使用PandoraNext的文件代理服务，避免官方文件服务的墙。
 * `captcha`配置一些关键页面的验证码。
     * `provider`验证码提供商，支持：`recaptcha_v2`、`recaptcha_enterprise`、`hcaptcha`、`turnstile`、`friendly_captcha`。
     * `site_key`验证码供应商后台获取的网站参数，是可以公布的信息。
@@ -195,6 +198,9 @@ server {
 * 内置账号密码的格式为：`邮箱,密码`，此种是`0`额度消耗的。
 
 ## proxy模式接口
+* 页面 /auth 使用账号密码，手动获取`access token`和`session token`。
+* 页面 /fk 使用`access token`或`session token`，手动获取`share token`，
+* 页面 /sk 使用`share token`，手动组`pool token`。
 * /backend-api/* `ChatGPT`网页版接口，具体F12去页面上看。
 * /public-api/* `ChatGPT`网页版接口，具体F12去页面上看。
 * **GET** /api/token/info/fk-xxx 获取share token信息，使用生成人的access token做为Authorization头，可查看各模型用量。
