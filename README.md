@@ -198,7 +198,7 @@ server {
 * 内置账号密码的格式为：`邮箱,密码`，此种是`0`额度消耗的。
 
 ## proxy模式接口
-* 页面 /auth 使用账号密码，手动获取`access token`和`session token`。
+* 页面 /auth 使用账号密码，手动获取`access token`和`session token`。只是给UI方便获取，`1:100`的消耗依然存在。
 * 页面 /fk 使用`access token`或`session token`，手动获取`share token`，
 * 页面 /pk 使用`share token`，手动组`pool token`。
 * /backend-api/* `ChatGPT`网页版接口，具体F12去页面上看。
