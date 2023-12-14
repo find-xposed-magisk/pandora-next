@@ -225,7 +225,9 @@ server {
 ## 关于 license_id
 
 > [!WARNING]
-> 湖北地区的朋友尝试更改你的DNS再启动，否则会Ping服务器失败。
+> 出现`Ping remote server failed`，通常是人在**湖北**或者Docker启动时遇到，请尝试设置`DNS`后启动。
+> 
+> 如果你遇到`Ping remote server failed`后面有ip、reason的，则非上述原因，请参考reason。
 
 * 在这里获取：[https://dash.pandoranext.com](https://dash.pandoranext.com)
 * 复制`License Id:`后的内容，填写在`config.json`的`license_id`字段。
