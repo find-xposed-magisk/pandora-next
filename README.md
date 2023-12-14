@@ -229,6 +229,7 @@ server {
 * 注意检查不要复制到多余的空格等不可见字符。
 * 如果`config.json`中没有填写`license_id`字段，启动会报错`License ID is required`。
 * **没有固定IP的情况**，IP变动后会自动尝试重新拉取。
+* 更换`License Id`之后，通常需要手动删除`license.jwt`再启动。
 
 ## 其他说明
 
