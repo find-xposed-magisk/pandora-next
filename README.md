@@ -224,6 +224,9 @@ server {
 
 ## 关于 license_id
 
+> [!WARNING]
+> 湖北地区的朋友尝试更改你的DNS再启动，否则会Ping服务器失败。
+
 * 在这里获取：[https://dash.pandoranext.com](https://dash.pandoranext.com)
 * 复制`License Id:`后的内容，填写在`config.json`的`license_id`字段。
 * 注意检查不要复制到多余的空格等不可见字符。
