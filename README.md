@@ -229,7 +229,6 @@ server {
 * 注意检查不要复制到多余的空格等不可见字符。
 * 如果`config.json`中没有填写`license_id`字段，启动会报错`License ID is required`。
 * **没有固定IP的情况**，IP变动后会自动尝试重新拉取。
-* 如果你要同时启动`web`和`proxy`模式，则必须共同一份`license.jwt`，此时建议手动拉取！
 
 ## 其他说明
 
