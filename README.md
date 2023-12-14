@@ -233,7 +233,7 @@ server {
 
 ## 其他说明
 
-> \[!CAUTION]
+> [!CAUTION]
 > * 如果你发现网页上不能复制，开启`https`或者使用`127.0.0.1`。
 > * 如果账密登录无限跳首页，请安装`ntpdate`后执行`sudo ntpdate time.windows.com`同步时间再试。
 > * 如果你正在自定义页面元素，请保留：
