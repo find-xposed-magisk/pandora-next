@@ -17,6 +17,7 @@
   "disable_signup": false,
   "auto_conv_arkose": false,
   "proxy_file_service": false,
+  "custom_doh_host": "",
   "captcha": {
     "provider": "",
     "site_key": "",
