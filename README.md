@@ -31,7 +31,7 @@
 
 * 仓库内已包含相关文件和目录，拉到本地，[获取license_id](#%E5%85%B3%E4%BA%8E-license_id)填写在`data/config.json`中。
 * `data`目录中包含`config.json`、`tokens.json`示例文件可自行修改。
-* `docker-compose up -d` **原神启动！**
+* `docker compose up -d` **原神启动！**
 
 ## Docker 部署
 
