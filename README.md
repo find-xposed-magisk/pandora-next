@@ -147,6 +147,7 @@ server {
     * `/v1/chat/completions` 4模型比例 `1:10`, 无需打码
     * `/api/auth/login` 登录接口比例 `1:100`，无需打码
     * `/api/arkose/token` 获取`arkose_token`，比例 `1:10`
+    * `/api/auth/platform/login` 登录platform接口比例 `1:100`，无需打码
 * `isolated_conv_title`现在隔离会话可以设置标题了，而不再是千篇一律的`*`号。
 * `disable_signup` 禁用注册账号功能，`true`或`false`。
 * `auto_conv_arkose` 在`proxy`模式使用`gpt-4`模型调用`/backend-api/conversation`接口是否自动打码，使用消耗为`4+10`。
@@ -216,6 +217,8 @@ server {
 * **POST** /v1/chat/completions 使用`ChatGPT`模拟`API`的请求接口，支持share token和pool token。
 * **POST** /api/arkose/token 获取arkose_token，目前只支持`gpt-4`类型。使用urlencode form传递type=gpt-4参数。获取后可API方式调用`GPTs`
 * **POST** /api/setup/reload 重载当前服务的`config.json`、`tokens.json`等配置。
+* **POST** /api/auth/platform/refresh 通过`platform`的refresh token获取access token，使用urlencode form传递refresh_token参数。
+* **POST** /api/auth/platform/login 登录`platform`获取access token，使用urlencode form传递username 和 password 参数。如果要获取`sess key`，增加参数`prompt=login`。
 * 以上地址均需在最前面增加 `/<proxy_api_prefix>`，也就是你设置的前缀。
 
 
