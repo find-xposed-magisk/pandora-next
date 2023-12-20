@@ -1,9 +1,11 @@
 # PandoraNext 
 
-#### ✨ 一个新的 [文档站](https://docs.pandoranext.com)。
-
-#### ✨ 现在我们可以使用PandoraNext [注册ChatGPT账号](https://zhile.io/2023/12/09/pandoranext-introduction.html)了，无墙，全代理！
-#### ✨ [PandoraNext助手GPTs](https://chat.oaifree.com/g/g-CFsXuTRfy-pandoranextzhu-shou)，如你有Plus账号，可向它求助项目问题（不要试图套源码）
+> [!IMPORTANT]
+> ✨ 一个新的 [文档站](https://docs.pandoranext.com)，从部署到常见问题，甚至接口调用都有详细说明。
+> 
+> ✨ 现在我们可以使用PandoraNext [注册ChatGPT账号](https://zhile.io/2023/12/09/pandoranext-introduction.html)了，无墙，全代理！
+> 
+> ✨ [PandoraNext助手GPTs](https://chat.oaifree.com/g/g-CFsXuTRfy-pandoranextzhu-shou)，如你有Plus账号，可向它求助项目问题（不要试图套源码）
 
 ## 简单介绍
 
@@ -21,6 +23,12 @@
 * 可启动为BackendAPI Proxy模式，直接使用`Access Token`调用`/backend-api/`和chat2api的接口。
 * 还有疑问，那就进Telegram群让大家围观围观：[@ja_netfilter_group](https://t.me/ja_netfilter_group)
 
+<details>
+<summary>
+	
+    旧的、简易的文档。更新、更详细的访问文档站。
+</summary>
+	
 ## 手动部署
 
 * 在[Releases](https://github.com/pandora-next/deploy/releases)中下载对应操作系统和架构的包。
@@ -237,6 +245,8 @@ server {
 * 如果`config.json`中没有填写`license_id`字段，启动会报错`License ID is required`。
 * **没有固定IP的情况**，IP变动后会自动尝试重新拉取。
 * 更换`License Id`之后，通常需要手动删除`license.jwt`再启动。
+
+</details>
 
 ## 其他说明
 
