@@ -156,6 +156,7 @@ server {
     * `/v1/chat/completions` 3.5模型比例 `1:4`
     * `/v1/chat/completions` 4模型比例 `1:10`, 无需打码
     * `/api/auth/login` 登录接口比例 `1:100`，无需打码
+    * `/api/auth/login2` 获取`refresh_token`接口比例 `1:1000`，无需打码
     * `/api/arkose/token` 获取`arkose_token`，比例 `1:10`
     * `/api/auth/platform/login` 登录platform接口比例 `1:100`，无需打码
 * `isolated_conv_title`现在隔离会话可以设置标题了，而不再是千篇一律的`*`号。
@@ -222,6 +223,7 @@ server {
 * **POST** /api/auth/session 通过session token获取access token，使用urlencode form传递session_token参数。
 * **POST** /api/auth/refresh 通过refresh token获取access token，使用urlencode form传递refresh_token参数。
 * **POST** /api/auth/login 登录获取access token，使用urlencode form传递username 和 password 参数。
+* **POST** /api/auth/login2 登录获取refresh token，使用urlencode form传递username、password 和 mfa_code 参数。
 * **POST** /api/token/register 生成share token
 * **POST** /api/pool/update 生成更新pool token
 * **POST** /v1/chat/completions 使用`ChatGPT`模拟`API`的请求接口，支持share token和pool token。
